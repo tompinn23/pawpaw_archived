@@ -14,5 +14,5 @@ add_subdirectory(third_party/glad)
 add_subdirectory(third_party/glm)
 
 
-add_executable(mach src/main.cxx src/window.cxx)
+add_executable(mach src/main.cxx src/window.cxx "src/BasicChunkRenderer.cxx")
 target_link_libraries(mach glfw glad glm)
