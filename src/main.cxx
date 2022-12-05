@@ -1,5 +1,5 @@
 #include "window.hxx"
-
+#include "Zip.hxx"
 
 const std::string vertex = R"(
 #version 410
@@ -19,6 +19,9 @@ void main() {
 
 
 int main(int argc, char** argv) {
+    auto z = Zip("test.zip");
+    z.Open();
+    auto entry = z.Find("glfw-3.3.8/");
     auto window = Window("Hello World.");
     if(window.Init() < 0) {
         return -1;
